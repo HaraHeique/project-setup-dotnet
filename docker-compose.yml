@@ -1,0 +1,17 @@
+services:
+  template.setup.webapi:
+    image: ${DOCKER_REGISTRY-}templatesetupwebapi
+    build:
+      context: .
+      dockerfile: src/Template.Setup.WebApi/Dockerfile
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: demodatabase 
+      POSTGRES_USER: postgres 
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./.containers/postgres_data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432

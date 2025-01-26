@@ -273,3 +273,6 @@ src/DevIO.Api/wwwroot/img/*
 # Temp files tests
 tests/DevIO.IntegrationTests/TempFiles/*
 !tests/DevIO.IntegrationTests/TempFiles/.gitkeep
+
+# Docker generations
+.containers

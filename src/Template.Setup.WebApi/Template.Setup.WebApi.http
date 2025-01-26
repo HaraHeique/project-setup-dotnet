@@ -1,0 +1,6 @@
+@Template.Setup.WebApi_HostAddress = http://localhost:5090
+
+GET {{Template.Setup.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
